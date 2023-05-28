@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d2f0n3vprfecr"
+path="res://.godot/imported/[A]Grass_pipo.png-359ec9fcc95652e443e938ff36fdb81b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://og pngs/Pipoya RPG Tileset 32x32/SampleMap/[A]Grass_pipo.png"
+dest_files=["res://.godot/imported/[A]Grass_pipo.png-359ec9fcc95652e443e938ff36fdb81b.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
