@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://bggro4g3chf14"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_25vf6"]
+[ext_resource type="FontFile" uid="uid://b6i3p7tme6ylc" path="res://GasoekOne-Regular.ttf" id="1_x1ytp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqksg"]
+bg_color = Color(0.560784, 0.603922, 0.678431, 0.392157)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmbws"]
+bg_color = Color(0.239216, 0.321569, 0.454902, 0.529412)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2kddc"]
+bg_color = Color(0.0235294, 0.0901961, 0.243137, 0.686275)
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_25vf6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1978.0
+offset_bottom = 1121.0
+color = Color(0.403922, 0.501961, 0.792157, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1978.0
+offset_bottom = 1121.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("1_x1ytp")
+theme_override_font_sizes/font_size = 200
+text = "FINNTASTICO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 500)
+layout_mode = 2
+
+[node name="play" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_x1ytp")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_pqksg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kmbws")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2kddc")
+text = "New Game"
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_fonts/font = ExtResource("1_x1ytp")
+theme_override_font_sizes/font_size = 75
+text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 640)
+zoom = Vector2(0.35, 0.35)
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/quit" to="." method="_on_quit_pressed"]
